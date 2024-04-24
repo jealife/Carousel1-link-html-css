@@ -5,22 +5,21 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: rgb(15, 14, 21);
 }
 main {
   padding: 5rem 3rem;
-  
 }
 .carousel {
   width: 100%;
   position: relative;
 }
 
-.carousel_wrapper::-webkit-scrollbar{
+.carousel_wrapper::-webkit-scrollbar {
   display: none;
 }
-.carousel_wrapper{
+.carousel_wrapper {
   position: relative;
   max-width: 48rem;
   margin: 0 auto;
@@ -29,7 +28,7 @@ main {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, .25);
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 1.5rem;
   display: flex;
 }
@@ -37,15 +36,14 @@ main {
 .caroulsel_item {
   list-style: none;
 }
-.caroulsel_item{
+.caroulsel_item {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
   object-position: center;
 }
 
-
-.carousel_nav{
+.carousel_nav {
   display: flex;
   position: absolute;
   gap: 1rem;
@@ -54,7 +52,7 @@ main {
   transform: translateX(-50%);
   z-index: 1;
 }
-.carousel_nav a{
+.carousel_nav a {
   color: white;
   width: 0.55rem;
   height: 0.55rem;
@@ -63,9 +61,18 @@ main {
   opacity: 0.75;
   transition: opacity ease 250ms;
 }
-.carousel_nav a:hover{
+.carousel_nav a:hover {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  main {
+    padding: 5rem 1.25rem;
+  }
+  .carousel_wrapper {
+    aspect-ratio: 9/16;
+  }
+}
+
 /* 
 .carousel_wrapper{
   animation: slide 3s infinite;
